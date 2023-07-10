@@ -1,0 +1,19 @@
+Cosas que pueda olvidarme y anotarlas aquí. 
+
+uso (npx) si quiero ejecutar funciones para automatizar tareas con Gulp desde el mismo archivo de gulpfile.js
+
+"npx gulp tarea"
+
+uso (npm) si quiero ejecutarlo en el package.json
+
+"npm run tarea"
+
+
+Pipies es una accion que se realiza despues de otra. 
+
+Cosas importantes: Usa un guion bajo para crear otro archivos con la extension .scss para que no compile dos archivos diferentes y que ese archivo se incluya en el archivo principal. 
+
+EJ: _nombreArchivo.extension.scss
+
+
+@use para usar el index de una carpeta y @forward para apuntar al archivo en cuestion en SASS
