@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+    box-sizing: border-box; // Contenido adaptable al ancho acordado.
+}
+*,
+*::before, 
+*::after {
+    box-sizing: inherit;
+} // Todos los elementos heredarán las pro[iedades asignadas anteriormente. 
+
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+} // fuente estandar y tamaño estandar para la web. 
+
+p {
+    font-size: 2rem;
+    color: v.$negro;
+} // color y tamaño estandar para los parrafos. 
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+} // ancho de 95% para una capacidad de 120px, en donde estará centrado. 
+
+a {
+    text-decoration: none;
+} // eliminar decoracion
+
+h1, h2, h3 {
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
