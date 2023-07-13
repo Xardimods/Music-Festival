@@ -35,3 +35,9 @@
         @content;
     }
 }
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr); // alineación en dos partes iguales
+    gap: $espaciado; // separacion vertical entre elementos
+}

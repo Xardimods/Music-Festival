@@ -1,4 +1,4 @@
-const {src, dest, watch} = require("gulp"); // require es un metodo que extrae un paquete, librería o framework
+const {src, dest, watch, parallel} = require("gulp"); // require es un metodo que extrae un paquete, librería o framework
 const sass = require("gulp-sass")(require('sass'));
 const plumber = require("gulp-plumber");
 
@@ -9,6 +9,12 @@ const plumber = require("gulp-plumber");
 // }
 
 // exports.tarea = tarea; 
+
+// Imágenes 
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 function css (done) {
     src('src/scss/**/*.scss') // Identificar el archivo de SASS
@@ -21,10 +27,48 @@ function css (done) {
     done(); // callback para marcar como hecha una tarea. 
 }
 
+function imagenes (done) {
+    const opciones = {
+        optimizationLevel: 3
+    }
+    
+    src('src/img/**/*.{png,jpg}')
+        .pipe(cache(imagemin(opciones)))
+        .pipe(dest('build/img'))
+    
+    done();
+}
+
+function versionWebp(done) {
+    const opciones = {
+        quality: 50
+    }; // calidad de imagen
+
+    src('src/img/**/*.{png,jpg}')
+        .pipe(webp(opciones))
+        .pipe(dest('build/img'));
+    done();
+} // convierte imagenes a formato webp
+
+function versionAvif(done) {
+    const opciones = {
+        quality: 50
+    }; // calidad de imagen
+
+    src('src/img/**/*.{png,jpg}')
+        .pipe(avif(opciones))
+        .pipe(dest('build/img'));
+    done();
+} // convierte imagenes a formato webp
+
 function dev (done) {
     watch('src/scss/**/*.scss', css); 
     done(); 
-}
+} // cambios inmediatos en los archivos de sass
 
 exports.css = css; 
-exports.dev = dev; 
+exports.imagenes = imagenes;
+exports.versionWebp = versionWebp;
+exports.versionAvif = versionAvif;
+exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+// exportaciones 
