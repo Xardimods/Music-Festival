@@ -41,3 +41,9 @@
     grid-template-columns: repeat($columnas, 1fr); // alineación en dos partes iguales
     gap: $espaciado; // separacion vertical entre elementos
 }
+
+@mixin reseteo-lista {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
