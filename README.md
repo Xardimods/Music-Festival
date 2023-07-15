@@ -8,8 +8,7 @@ Proyecto de música usando SASS y Gulp. Se irá actualizando conforme se hagan l
   
 - [update on 12/7/2023]: Nuevos formatos de imágenes.  
 
-- [update on 14/7/2023]: Nueva LineUp. 
-
+  
 - [update on 14/7/2023]: Nueva Galería.
 
 - [update on 14/7/2023]: Nueva Sección de Boletos y Footer.
