@@ -61,14 +61,23 @@ function versionAvif(done) {
     done();
 } // convierte imagenes a formato webp
 
+function javascript(done) {
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'))
+
+    done();
+}
+
 function dev (done) {
-    watch('src/scss/**/*.scss', css); 
+    watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', javascript);
     done(); 
 } // cambios inmediatos en los archivos de sass
 
-exports.css = css; 
+exports.css = css;
+exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev);
 // exportaciones 
