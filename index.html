@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ven a visitar el festival más grande de toda la nación. ¡No te lo pierdas!">
     <title>Rock & EDM Festival</title>
+    <link rel="icon" href="src/img/icono_edm.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -18,9 +20,9 @@
         <div class="contenedor contenido-header">
             <h1>Rock & EDM Festival</h1>
             <nav class="navegacion-principal">
-                <a href="#">Line Up</a>
-                <a href="#">Galería</a>
-                <a href="#">Boletos</a>
+                <a href="#lineup">Line Up</a>
+                <a href="#galeria">Galería</a>
+                <a href="#boletos">Boletos</a>
             </nav>
         </div>
     </header>
@@ -55,7 +57,7 @@
         </div>
     </section>
 
-    <section class="lineup">
+    <section id="lineup" class="lineup">
         <h3>Line Up</h3>
         <p class="dia">Jueves 13</p>
 
@@ -164,7 +166,7 @@
         </div> <!--Cierre de escenarios contenedor-->
     </section>
 
-    <section class="galeria contenedor">
+    <section id="galeria" class="galeria contenedor">
         <h3>Galería</h3>
         
         <ul class="galeria-imagenes"></ul>
@@ -172,9 +174,9 @@
     <script src="build/js/app.js"></script>
 
     <section class="boletos bg-verde">
-        <h3>Boletos</h3>
+        <h3 style="padding-top: 5rem;">Boletos</h3>
 
-        <div class="contenedor contenedor-boletos">
+        <div id="boletos" class="contenedor contenedor-boletos">
             <div class="basico pase">
                 <p class="nombre-pase">Pase De 1 Día</p>
                 <header class="pase-header">
@@ -208,13 +210,13 @@
                 </footer>
             </div>
         </div>
-        <div class="pase-boton">
-            <a href="#">¡Consíguelos aquí!</a>
+        <div class="boton">
+            <a class="pase-boton" href="#">¡Consíguelos aquí!</a>
         </div>
     </section>
 
     <footer class="site-footer">
-        <p>Rock & EDM Festival. Todos los derechos reservados 2023</p>
+        <p>Rock & EDM Festival. Todos los Derechos Reservados 2023</p>
     </footer>
 </body>
 </html>

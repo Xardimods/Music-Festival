@@ -3,6 +3,7 @@
 html {
     font-size: 62.5%; // 1rem = 10px
     box-sizing: border-box; // Contenido adaptable al ancho acordado.
+    // scroll-behavior: smooth;
 }
 *,
 *::before, 
@@ -16,6 +17,10 @@ body {
 
     &.fijar-body {
         overflow: hidden;
+    }
+
+    &.fix-scroll {
+        padding-top: 8.6rem;
     }
 } // fuente estandar y tamaño estandar para la web. 
 
