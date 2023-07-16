@@ -13,3 +13,8 @@ Proyecto de música usando SASS y Gulp. Se irá actualizando conforme se hagan l
 - [update on 12/7/2023]: Nueva LineUp.  
   
 - [update on 14/7/2023]: Nueva Sección de Boletos y Footer.
+
+
+Deploy: https://xardimods-edm-and-rock-festival.netlify.app/
+
+¡Espero que lo disfrutes! :D
